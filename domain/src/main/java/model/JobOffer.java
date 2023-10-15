@@ -1,13 +1,23 @@
 package model;
 
-import java.time.LocalDate;
+import lombok.*;
 
+import java.time.LocalDate;
+import java.util.Date;
+import java.util.List;
+
+@AllArgsConstructor
+@Builder
+@ToString
+@Getter
+@Setter
 public class JobOffer {
     private Long offerId;
-    private Long schoolId;
     private String description;
-    private LocalDate publicationDate;
-    private LocalDate modificationDate;
+    private Date publicationDate;
+    private Date modificationDate;
     private OfferStatus status;
+    private List<Application> applications;
+    private School createdBy;
 
 }

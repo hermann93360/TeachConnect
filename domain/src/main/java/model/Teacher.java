@@ -1,10 +1,17 @@
 package model;
 
+import lombok.*;
+
+import java.util.List;
+
+@AllArgsConstructor
+@Getter
+@Setter
+@Builder
 public class Teacher {
     private Long teacherId;
-    private Long userId;
-    private String firstName;
-    private String lastName;
+    private User user;
     private String specialty;
+    private List<Application> applications;
 
 }

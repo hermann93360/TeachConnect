@@ -4,16 +4,22 @@ import lombok.Builder;
 import lombok.Data;
 import model.Teacher;
 import model.User;
+import model.UserRole;
+
+import java.util.ArrayList;
+import java.util.Optional;
 
 @Builder
 @Data
-public class RegisterTeacherCommand {
-    private Long userId;
-    private String firstName;
-    private String lastName;
+public class TeacherControlCommand {
+    private Long teacherId;
     private String specialty;
+    private String login;
+    private String password;
+    private String firstname;
+    private String lastname;
 
     public Teacher toModel() {
-        return new Teacher(null, new User(userId, null, null, null, null), firstName, lastName, specialty, null);
+        return new Teacher(teacherId, new User(null, login, firstname, lastname, password, UserRole.TEACHER, null), specialty, new ArrayList<>());
     }
 }

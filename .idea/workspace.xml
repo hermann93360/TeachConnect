@@ -9,7 +9,67 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="158f47c9-c6be-4817-b9d9-79199c580dff" name="Changes" comment="init project with some model classes" />
+    <list default="true" id="158f47c9-c6be-4817-b9d9-79199c580dff" name="Changes" comment="recovery">
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/command/ApplyForJobOfferCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/command/CreateJobOfferCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/command/RegisterSchoolCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/command/RegisterUserCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/command/TeacherControlCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/command/UpdateJobOfferCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/command/UpdateSchoolCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/command/UpdateTeacherCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/command/UpdateUserCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/exception/UserException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/persistence/ApplicationData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/persistence/JobOfferData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/persistence/SchoolData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/persistence/TeacherData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/persistence/UserData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/service/SchoolManagementService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/service/TeacherManagementService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/service/UserManagementService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/usecase/CommercialManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/usecase/SchoolManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/usecase/TeacherManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/usecase/UserManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/test/java/John.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/test/java/stubs/ApplicationDataStub.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/test/java/stubs/InitClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/test/java/stubs/JobOfferDataStub.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/test/java/stubs/SchoolDataStub.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/test/java/stubs/TeacherDataStub.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/test/java/stubs/UserDataStub.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/test/java/usecase/SchoolManagementTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/test/java/usecase/TeacherManagementTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/test/java/usecase/UserManagementTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/resaschool/infrastructure/InfrastructureApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/resaschool/infrastructure/model/ApplicationEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/resaschool/infrastructure/model/JobOfferEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/resaschool/infrastructure/model/SchoolEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/resaschool/infrastructure/model/TeacherEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/resaschool/infrastructure/model/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/resaschool/infrastructure/InfrastructureApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/domain/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/model/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/model/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/model/JobOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/model/JobOffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/model/School.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/model/School.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/model/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/model/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/usecase/CreateProfessorUseCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest" beforeDir="false" afterPath="$PROJECT_DIR$/rest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/src/main/java/com/relaschool/rest/controller/ManageProfessorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest/src/main/java/com/relaschool/rest/controller/ManageProfessorController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,14 +78,22 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="recovery" />
+      </map>
+    </option>
+    <option name="RECENT_COMMON_BRANCH" value="master" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -45,21 +113,46 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "11",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "f1bd16de3e0d74fac68ae6d5e400843d",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JBoss/WildFly Server.JBoss/WildFly 27.0.1.Final">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="exception" />
+      <recent name="service" />
+      <recent name="usecase" />
+      <recent name="command" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="exception" />
+      <recent name="service" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="usecase" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.SchoolManagementTest.shouldSaveNewJobOfferAsSchool">
     <configuration name="JBoss/WildFly 27.0.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 27.0.1.Final" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="11" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -131,6 +224,92 @@
         </option>
       </method>
     </configuration>
+    <configuration name="SchoolManagementTest.shouldSaveNewJobOfferAsSchool" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="domain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="usecase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="usecase" />
+      <option name="MAIN_CLASS_NAME" value="usecase.SchoolManagementTest" />
+      <option name="METHOD_NAME" value="shouldSaveNewJobOfferAsSchool" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SchoolManagementTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="domain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="usecase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="usecase" />
+      <option name="MAIN_CLASS_NAME" value="usecase.SchoolManagementTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TeacherManagementTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="domain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="usecase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="usecase" />
+      <option name="MAIN_CLASS_NAME" value="usecase.TeacherManagementTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TeacherManagementTest.shouldDeleteTeacher" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="domain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="usecase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="usecase" />
+      <option name="MAIN_CLASS_NAME" value="usecase.TeacherManagementTest" />
+      <option name="METHOD_NAME" value="shouldDeleteTeacher" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TeacherManagementTest.shouldNotDeleteUnknownTeacher" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="domain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="usecase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="usecase" />
+      <option name="MAIN_CLASS_NAME" value="usecase.TeacherManagementTest" />
+      <option name="METHOD_NAME" value="shouldNotDeleteUnknownTeacher" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InfrastructureApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="infrastructure" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.resaschool.infrastructure.InfrastructureApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="rest" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.relaschool.rest.RestApplication" />
@@ -140,8 +319,23 @@
     </configuration>
     <list>
       <item itemvalue="JBoss/WildFly Server.JBoss/WildFly 27.0.1.Final" />
+      <item itemvalue="JUnit.SchoolManagementTest.shouldSaveNewJobOfferAsSchool" />
+      <item itemvalue="JUnit.SchoolManagementTest.test" />
+      <item itemvalue="JUnit.TeacherManagementTest" />
+      <item itemvalue="JUnit.TeacherManagementTest.shouldDeleteTeacher" />
+      <item itemvalue="JUnit.TeacherManagementTest.shouldNotDeleteUnknownTeacher" />
+      <item itemvalue="Spring Boot.InfrastructureApplication" />
       <item itemvalue="Spring Boot.RestApplication" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SchoolManagementTest.shouldSaveNewJobOfferAsSchool" />
+        <item itemvalue="JUnit.SchoolManagementTest.test" />
+        <item itemvalue="JUnit.TeacherManagementTest.shouldNotDeleteUnknownTeacher" />
+        <item itemvalue="JUnit.TeacherManagementTest.shouldDeleteTeacher" />
+        <item itemvalue="JUnit.TeacherManagementTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -152,6 +346,7 @@
       <option name="presentableId" value="Default" />
       <updated>1697111411519</updated>
       <workItem from="1697111412638" duration="7120000" />
+      <workItem from="1697201028768" duration="21832000" />
     </task>
     <task id="LOCAL-00001" summary="init project with some model classes">
       <created>1697121283576</created>
@@ -179,13 +374,51 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init project with some model classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="init project with some model classes" />
+    <MESSAGE value="recovery" />
+    <option name="LAST_COMMIT_MESSAGE" value="recovery" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/domain/src/test/java/stubs/SchoolDataStub.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/domain/src/test/java/stubs/InitClass.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/domain/src/test/java/stubs/InitClass.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/domain/src/test/java/stubs/JobOfferDataStub.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/domain/src/test/java/stubs/JobOfferDataStub.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/global$UserManagementTest_shouldDeleteUser.ic" NAME="UserManagementTest.shouldDeleteUser Coverage Results" MODIFIED="1697317455101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>usecase.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/global$JBoss_WildFly_27_0_1_Final.ic" NAME="JBoss/WildFly 27.0.1.Final Coverage Results" MODIFIED="1697118996781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/global$SchoolManagementTest_shouldSaveNewJobOfferAsSchool.ic" NAME="SchoolManagementTest.shouldSaveNewJobOfferAsSchool Coverage Results" MODIFIED="1697235885983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>usecase.*</FILTER>
+    </SUITE>
   </component>
 </project>

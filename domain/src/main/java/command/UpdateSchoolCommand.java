@@ -1,2 +1,4 @@
-package command;public class UpdateSchoolCommand {
+package command;
+
+public class UpdateSchoolCommand {
 }
