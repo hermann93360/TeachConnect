@@ -13,7 +13,7 @@ public class SchoolDataStub implements SchoolData {
     private final UserData userData = new UserDataStub();
 
     @Override
-    public School save(School school) {
+    public School saveOrUpdate(School school) {
         if(school.getSchoolId() == null) {
             long id = schools.size() + 1L;
             school.setSchoolId(id);
@@ -37,8 +37,8 @@ public class SchoolDataStub implements SchoolData {
     }
 
     @Override
-    public void delete(School school) {
-        schools.remove(school.getSchoolId());
+    public void delete(Long schoolId) {
+        schools.remove(schoolId);
     }
 
     @Override

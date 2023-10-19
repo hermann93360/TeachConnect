@@ -2,6 +2,8 @@ package stubs;
 
 import model.Application;
 import persistence.ApplicationData;
+import persistence.JobOfferData;
+import persistence.TeacherData;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,6 +11,8 @@ import java.util.Map;
 public class ApplicationDataStub implements ApplicationData {
 
     public static Map<Long, Application> applications = new HashMap<>();
+    private final TeacherData teacherData = new TeacherDataStub();
+    private final JobOfferData jobOfferData = new JobOfferDataStub();
 
     @Override
     public Application save(Application application) {
@@ -17,11 +21,20 @@ public class ApplicationDataStub implements ApplicationData {
             application.setApplicationId(id);
         }
         applications.put(application.getApplicationId(), application);
+        teacherData.save(application.getApplyTeacher());
+        jobOfferData.save(application.getAssociatedOffer());
         return application;
     }
 
     @Override
-    public void delete(Application application) {
-        applications.remove(application.getApplicationId());
+    public void delete(Long applicationId) {
+        Application application = applications.values().stream()
+                .filter(x -> x.getApplicationId().equals(applicationId))
+                .findAny()
+                .get();
+
+        teacherData.save(application.getApplyTeacher());
+        jobOfferData.save(application.getAssociatedOffer());
+        applications.remove(applicationId);
     }
 }

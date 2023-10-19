@@ -9,7 +9,7 @@ import java.util.Optional;
 public interface JobOfferData {
     JobOffer save(JobOffer jobOffer);
     Optional<JobOffer> findById(Long id);
-    void delete(JobOffer jobOffer);
+    void delete(Long offerId);
     List<JobOffer> findAll();
     List<Teacher> findTeacherByApplyOfferId(Long offerId);
 }

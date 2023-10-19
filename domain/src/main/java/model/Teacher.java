@@ -4,6 +4,8 @@ import lombok.*;
 
 import java.util.List;
 
+import static model.Application.createNewApplication;
+
 @AllArgsConstructor
 @Getter
 @Setter
@@ -14,4 +16,20 @@ public class Teacher {
     private String specialty;
     private List<Application> applications;
 
+    public Application applyFor(JobOffer offer) {
+        Application newApplication = createNewApplication(this, offer);
+        applications.add(newApplication);
+        offer.haveNewApplication(newApplication);
+        return newApplication;
+    }
+
+    public void removeApplication(Long applicationId) {
+        Application application = applications.stream()
+                .filter(app -> app.getApplicationId().equals(applicationId))
+                .findAny()
+                .orElseThrow(() -> {throw new RuntimeException();});
+
+        application.getAssociatedOffer().removeApplication(application);
+        applications.remove(application);
+    }
 }

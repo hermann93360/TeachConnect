@@ -2,7 +2,6 @@ package model;
 
 import lombok.*;
 
-import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -20,4 +19,11 @@ public class JobOffer {
     private List<Application> applications;
     private School createdBy;
 
+    public void haveNewApplication(Application application) {
+        applications.add(application);
+    }
+
+    public void removeApplication(Application application) {
+        applications.remove(application);
+    }
 }

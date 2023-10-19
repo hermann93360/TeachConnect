@@ -20,7 +20,7 @@ public interface TeacherManagement {
 
     Application applyForJobOffer(ApplyForJobOfferCommand command);
 
-    void retractApplication(Long applicationId);
+    void retractApplication(Long teacherId, Long applicationId);
 
     List<JobOffer> viewAppliedJobOffers(Long teacherId);
 

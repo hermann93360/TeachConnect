@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Optional;
 
 public interface SchoolData {
-    School save(School school);
+    School saveOrUpdate(School school);
     Optional<School> findById(Long id);
-    void delete(School school);
+    void delete(Long schoolId);
     List<School> findAll();
 }

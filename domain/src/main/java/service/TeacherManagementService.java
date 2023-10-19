@@ -8,14 +8,12 @@ import model.Application;
 import model.JobOffer;
 import model.Teacher;
 import model.User;
-import persistence.JobOfferData;
-import persistence.SchoolData;
-import persistence.TeacherData;
-import persistence.UserData;
+import persistence.*;
 import usecase.TeacherManagement;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @AllArgsConstructor
 public class TeacherManagementService implements TeacherManagement {
@@ -24,6 +22,7 @@ public class TeacherManagementService implements TeacherManagement {
     private final SchoolData schoolData;
     private final UserData userData;
     private final TeacherData teacherData;
+    private final ApplicationData applicationData;
 
     @Override
     public Teacher registerTeacher(TeacherControlCommand command) {
@@ -67,16 +66,47 @@ public class TeacherManagementService implements TeacherManagement {
 
     @Override
     public Application applyForJobOffer(ApplyForJobOfferCommand command) {
-        return null;
+        Optional<Teacher> applyTeacher = teacherData.findById(command.getTeacherId());
+        Optional<JobOffer> applyOffer = jobOfferData.findById(command.getOfferId());
+
+        if(applyTeacher.isEmpty()) {
+            throw new RuntimeException("");
+        }
+
+        if(applyOffer.isEmpty()) {
+            throw new RuntimeException("");
+        }
+
+        Application application = applyTeacher
+                .get()
+                .applyFor(applyOffer.get());
+
+        return applicationData.save(application);
     }
 
     @Override
-    public void retractApplication(Long applicationId) {
+    public void retractApplication(Long teacherId, Long applicationId) {
+        Optional<Teacher> applyTeacher = teacherData.findById(teacherId);
 
+        if(applyTeacher.isEmpty()) {
+            throw new RuntimeException("This teacher do not exist");
+        }
+
+
+        applyTeacher.get().removeApplication(applicationId);
+        applicationData.delete(applicationId);
     }
 
     @Override
     public List<JobOffer> viewAppliedJobOffers(Long teacherId) {
-        return null;
+        Optional<Teacher> teacher = teacherData.findById(teacherId);
+
+        if(teacher.isEmpty()) {
+            throw new RuntimeException("Teacher do not exist");
+        }
+
+        return teacher.get().getApplications().stream()
+                .map(Application::getAssociatedOffer)
+                .collect(Collectors.toList());
     }
 }

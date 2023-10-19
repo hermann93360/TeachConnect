@@ -3,12 +3,12 @@ package service;
 import command.CreateJobOfferCommand;
 import command.RegisterSchoolCommand;
 import command.UpdateJobOfferCommand;
-import command.UpdateSchoolCommand;
+import exception.JobOfferException;
+import exception.UserException;
 import lombok.AllArgsConstructor;
 import model.*;
 import persistence.JobOfferData;
 import persistence.SchoolData;
-import persistence.TeacherData;
 import persistence.UserData;
 import usecase.SchoolManagement;
 
@@ -26,26 +26,37 @@ public class SchoolManagementService implements SchoolManagement {
 
     @Override
     public School registerSchool(RegisterSchoolCommand command) {
-        School schoolToRegister = command.toModel();
-        Optional<User> user = userData.findById(command.getUserId());
+        Optional<User> userByLogin = userData.findByLogin(command.getUserLogin());
 
-        if(user.isEmpty()) {
-            throw new RuntimeException("");
+        if(userByLogin.isPresent()) {
+            throw new UserException("this user already exist");
         }
 
-        schoolToRegister.setUser(user.get());
-        return schoolData.save(schoolToRegister);
-
+        School school = command.toModel();
+        return schoolData.saveOrUpdate(school);
     }
 
     @Override
-    public School updateSchoolDetails(UpdateSchoolCommand command) {
-        return null;
+    public School updateSchoolDetails(RegisterSchoolCommand command) {
+        Optional<User> userByLogin = userData.findByLogin(command.getUserLogin());
+
+        if(userByLogin.isPresent() && !userByLogin.get().getLogin().equalsIgnoreCase(command.getUserLogin())) {
+            throw new UserException("user with this login exist");
+        }
+
+        School school = command.toModel();
+        return schoolData.saveOrUpdate(school);
     }
 
     @Override
     public void deleteSchool(Long schoolId) {
+        Optional<School> school = schoolData.findById(schoolId);
 
+        if(school.isEmpty()) {
+            throw new RuntimeException("");
+        }
+
+        schoolData.delete(schoolId);
     }
 
     @Override
@@ -71,7 +82,7 @@ public class SchoolManagementService implements SchoolManagement {
     @Override
     public JobOffer postJobOffer(CreateJobOfferCommand command, Long schoolId) {
         JobOffer jobOffer = command.toModel();
-        Optional<School> schoolToPost = schoolData.findById(schoolId);
+        Optional<School> schoolToPost = schoolData.findById(command.getSchoolId());
 
         if(schoolToPost.isEmpty()) {
             throw new RuntimeException("");
@@ -80,18 +91,30 @@ public class SchoolManagementService implements SchoolManagement {
         jobOffer.setCreatedBy(schoolToPost.get());
         schoolToPost.get().getJobOffers().add(jobOffer);
 
-        schoolData.save(schoolToPost.get());
         return jobOfferData.save(jobOffer);
     }
 
     @Override
     public JobOffer updateJobOffer(UpdateJobOfferCommand command) {
-        return null;
+        Optional<JobOffer> offer = jobOfferData.findById(command.getOfferId());
+
+        if(offer.isPresent()) {
+            throw new JobOfferException("job offer do not exist");
+        }
+
+        JobOffer jobOffer = command.toModel();
+        return jobOfferData.save(jobOffer);
     }
 
     @Override
     public void deleteJobOffer(Long offerId) {
+        Optional<JobOffer> offer = jobOfferData.findById(offerId);
 
+        if(offer.isPresent()) {
+            throw new JobOfferException("job offer do not exist");
+        }
+
+        jobOfferData.delete(offerId);
     }
 
     @Override

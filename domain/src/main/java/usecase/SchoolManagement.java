@@ -3,7 +3,6 @@ package usecase;
 import command.CreateJobOfferCommand;
 import command.RegisterSchoolCommand;
 import command.UpdateJobOfferCommand;
-import command.UpdateSchoolCommand;
 import model.JobOffer;
 import model.School;
 import model.Teacher;
@@ -14,7 +13,7 @@ public interface SchoolManagement {
 
     School registerSchool(RegisterSchoolCommand command);
 
-    School updateSchoolDetails(UpdateSchoolCommand command);  // We can reuse RegisterSchoolCommand for update
+    School updateSchoolDetails(RegisterSchoolCommand command);
 
     void deleteSchool(Long schoolId);
 

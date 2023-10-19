@@ -1,25 +1,23 @@
 package usecase;
 
+import command.ApplyForJobOfferCommand;
 import command.TeacherControlCommand;
 import exception.UserException;
-import model.Teacher;
-import model.User;
-import model.UserRole;
+import model.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import persistence.ApplicationData;
 import persistence.JobOfferData;
 import persistence.SchoolData;
 import persistence.UserData;
 import service.TeacherManagementService;
-import stubs.JobOfferDataStub;
-import stubs.SchoolDataStub;
-import stubs.TeacherDataStub;
-import stubs.UserDataStub;
+import stubs.*;
 
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
+import static model.Application.createNewApplication;
+import static model.UserRole.TEACHER;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -30,10 +28,11 @@ class TeacherManagementTest {
     private final SchoolData schoolData = new SchoolDataStub();
     private final UserData userData = new UserDataStub();
     private final TeacherDataStub teacherData = new TeacherDataStub();
+    private final ApplicationData applicationData = new ApplicationDataStub();
 
     @BeforeEach
     public void setup() {
-        teacherManagement = new TeacherManagementService(jobOfferData, schoolData, userData, teacherData);
+        teacherManagement = new TeacherManagementService(jobOfferData, schoolData, userData, teacherData, applicationData);
     }
 
     @AfterEach
@@ -63,7 +62,7 @@ class TeacherManagementTest {
 
     @Test
     public void shouldNotRegisterNewTeacherIfExist() {
-        saveTeacherForTests("Hermann", "Kamguin", "hkamguin@gmail.com");
+        createTeacher("Hermann", "Kamguin", "hkamguin@gmail.com");
         int initSize = teacherData.findAll().size();
         TeacherControlCommand command = TeacherControlCommand.builder()
                 .firstname("john")
@@ -82,7 +81,7 @@ class TeacherManagementTest {
 
     @Test
     public void shouldUpdateTeacherInformations() {
-        Long idOfUserSaved = saveTeacherForTests("Hermann", "Kamguin", "hkamguin@gmail.com");
+        Long idOfUserSaved = createTeacher("Hermann", "Kamguin", "hkamguin@gmail.com").getTeacherId();
         TeacherControlCommand command = TeacherControlCommand.builder()
                 .teacherId(idOfUserSaved)
                 .firstname("mickael")
@@ -102,8 +101,8 @@ class TeacherManagementTest {
 
     @Test
     public void shouldNotUpdateTeacherWithEmailNotAvailable() {
-        Long idOfUserSaved1 = saveTeacherForTests("Hermann", "Kamguin", "hkamguin@gmail.com");
-        saveTeacherForTests("Hermann", "Kamguin", "aaa@gmail.com");
+        Long idOfUserSaved1 = createTeacher("Hermann", "Kamguin", "hkamguin@gmail.com").getTeacherId();
+        createTeacher("Hermann", "Kamguin", "aaa@gmail.com");
         TeacherControlCommand command = TeacherControlCommand.builder()
                 .teacherId(idOfUserSaved1)
                 .firstname("mickael")
@@ -120,7 +119,7 @@ class TeacherManagementTest {
 
     @Test
     public void shouldDeleteTeacher() {
-        Long idOfUserSaved = saveTeacherForTests("Hermann", "Kamguin", "hkamguin@gmail.com");
+        Long idOfUserSaved = createTeacher("Hermann", "Kamguin", "hkamguin@gmail.com").getTeacherId();
         int initSize = teacherData.findAll().size();
 
         teacherManagement.deleteTeacher(idOfUserSaved);
@@ -138,15 +137,99 @@ class TeacherManagementTest {
         assertThat(userException).hasMessage("user do not exist");
     }
 
-    private Long saveTeacherForTests(String firstname, String lastname, String login) {
+    @Test
+    public void teacherShouldApplyForAnyJobOffer() {
+        School schoolSaved = createSchoolForTests("EFREI", "villejuif", "hkamguin@gmail.com");
+        JobOffer jobOfferSaved = createJobOffer(schoolSaved, "chercher prof java");
+        Teacher teacher = createTeacher("Hermann", "Kamguin", "hkamguin@gmail.com");
+
+        ApplyForJobOfferCommand command = ApplyForJobOfferCommand.builder()
+                .offerId(jobOfferSaved.getOfferId())
+                .teacherId(teacher.getTeacherId())
+                .build();
+
+        teacherManagement.applyForJobOffer(command);
+
+        Optional<Teacher> teacherAfterApply = teacherData.findById(teacher.getTeacherId());
+        Optional<JobOffer> jobOfferAfterApply = jobOfferData.findById(jobOfferSaved.getOfferId());
+        assertThat(teacherAfterApply.get().getApplications()).hasSize(1);
+        assertThat(jobOfferAfterApply.get().getApplications()).hasSize(1);
+    }
+
+    @Test
+    public void teacherShouldViewApplyJob() {
+        School schoolSaved = createSchoolForTests("EFREI", "villejuif", "hkamguin@gmail.com");
+        JobOffer jobOfferSaved = createJobOffer(schoolSaved, "chercher prof java");
+        Teacher teacher = createTeacher("Hermann", "Kamguin", "hkamguin@gmail.com");
+        apply(jobOfferSaved, teacher);
+
+        List<JobOffer> jobOffers = teacherManagement.viewAppliedJobOffers(teacher.getTeacherId());
+
+        assertThat(jobOffers).hasSize(1);
+    }
+
+    @Test
+    public void teacherShouldRemoveApply() {
+        School schoolSaved = createSchoolForTests("EFREI", "villejuif", "hkamguin@gmail.com");
+        JobOffer jobOfferSaved = createJobOffer(schoolSaved, "chercher prof java");
+        Teacher teacher = createTeacher("Hermann", "Kamguin", "hkamguin@gmail.com");
+        Application apply = apply(jobOfferSaved, teacher);
+
+        teacherManagement.retractApplication(teacher.getTeacherId(), apply.getApplicationId());
+
+        List<JobOffer> jobOffers = getTeacherApplied(teacher.getTeacherId());
+        assertThat(jobOffers).hasSize(0);
+    }
+
+    private List<JobOffer> getTeacherApplied(Long teacherId) {
+        return teacherManagement.viewAppliedJobOffers(teacherId);
+    }
+
+    private Application apply(JobOffer jobOfferSaved, Teacher teacher) {
+        Application application = teacher.applyFor(jobOfferSaved);
+        applicationData.save(application);
+        teacherData.save(teacher);
+        jobOfferData.save(jobOfferSaved);
+        return application;
+    }
+
+    private Teacher createTeacher(String firstname, String lastname, String login) {
         return teacherData.save(Teacher.builder()
                 .user(User.builder()
-                        .role(UserRole.TEACHER)
+                        .role(TEACHER)
                         .firstName(firstname)
                         .lastName(lastname)
                         .login(login)
                         .build())
-                .build()).getTeacherId();
+                .applications(new ArrayList<>())
+                .build());
+    }
+
+    private School createSchoolForTests(String name, String address, String contact) {
+        return schoolData.saveOrUpdate(School.builder()
+                .name(name)
+                .address(address)
+                .contact(contact)
+                .user(User.builder()
+                        .role(TEACHER)
+                        .firstName("firstname")
+                        .lastName("lastname")
+                        .login("login")
+                        .password("hash")
+                        .build())
+                .jobOffers(new ArrayList<>())
+                .build());
+    }
+
+    public JobOffer createJobOffer(School associatedSchool, String description) {
+        return jobOfferData.save(JobOffer.builder()
+                .createdBy(associatedSchool)
+                .applications(new ArrayList<>())
+                .description(description)
+                .publicationDate(new Date())
+                .status(OfferStatus.OPEN)
+                .modificationDate(null)
+                .build());
     }
 
 }
