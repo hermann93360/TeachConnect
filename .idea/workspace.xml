@@ -10,26 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="158f47c9-c6be-4817-b9d9-79199c580dff" name="Changes" comment="new work">
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/exception/JobOfferException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/temp.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/command/ApplyForJobOfferCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/command/ApplyForJobOfferCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/command/CreateJobOfferCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/command/CreateJobOfferCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/command/RegisterSchoolCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/command/RegisterSchoolCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/model/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/model/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/model/JobOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/model/JobOffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/model/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/model/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/persistence/ApplicationData.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/persistence/ApplicationData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/persistence/JobOfferData.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/persistence/JobOfferData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/persistence/SchoolData.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/persistence/SchoolData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/service/SchoolManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/service/SchoolManagementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/service/TeacherManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/service/TeacherManagementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/usecase/SchoolManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/usecase/SchoolManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/usecase/TeacherManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/usecase/TeacherManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/test/java/stubs/ApplicationDataStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/stubs/ApplicationDataStub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/test/java/stubs/JobOfferDataStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/stubs/JobOfferDataStub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/test/java/stubs/SchoolDataStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/stubs/SchoolDataStub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/test/java/usecase/SchoolManagementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/usecase/SchoolManagementTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/test/java/usecase/TeacherManagementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/usecase/TeacherManagementTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/resaschool/infrastructure/model/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/resaschool/infrastructure/model/UserEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +97,7 @@
       <recent name="usecase" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TeacherManagementTest.teacherShouldRemoveApply">
+  <component name="RunManager" selected="JUnit.java in domain">
     <configuration name="JBoss/WildFly 27.0.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 27.0.1.Final" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="11" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -200,22 +184,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SchoolManagementTest.shouldDeleteTeacher" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="domain" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="usecase.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="usecase" />
-      <option name="MAIN_CLASS_NAME" value="usecase.SchoolManagementTest" />
-      <option name="METHOD_NAME" value="shouldDeleteTeacher" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TeacherManagementTest.teacherShouldApplyForAnyJobOffer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
@@ -264,6 +232,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="java in domain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="domain" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/domain/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InfrastructureApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="infrastructure" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.resaschool.infrastructure.InfrastructureApplication" />
@@ -281,20 +257,20 @@
     <list>
       <item itemvalue="JBoss/WildFly Server.JBoss/WildFly 27.0.1.Final" />
       <item itemvalue="JUnit.SchoolManagementTest" />
-      <item itemvalue="JUnit.SchoolManagementTest.shouldDeleteTeacher" />
       <item itemvalue="JUnit.TeacherManagementTest.teacherShouldApplyForAnyJobOffer" />
       <item itemvalue="JUnit.TeacherManagementTest.teacherShouldRemoveApply" />
       <item itemvalue="JUnit.TeacherManagementTest.teacherShouldViewApplyJob" />
+      <item itemvalue="JUnit.java in domain" />
       <item itemvalue="Spring Boot.InfrastructureApplication" />
       <item itemvalue="Spring Boot.RestApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.java in domain" />
         <item itemvalue="JUnit.TeacherManagementTest.teacherShouldRemoveApply" />
         <item itemvalue="JUnit.TeacherManagementTest.teacherShouldApplyForAnyJobOffer" />
         <item itemvalue="JUnit.TeacherManagementTest.teacherShouldViewApplyJob" />
         <item itemvalue="JUnit.SchoolManagementTest" />
-        <item itemvalue="JUnit.SchoolManagementTest.shouldDeleteTeacher" />
       </list>
     </recent_temporary>
   </component>
@@ -307,7 +283,7 @@
       <option name="presentableId" value="Default" />
       <updated>1697111411519</updated>
       <workItem from="1697111412638" duration="7120000" />
-      <workItem from="1697201028768" duration="35622000" />
+      <workItem from="1697201028768" duration="41135000" />
     </task>
     <task id="LOCAL-00001" summary="init project with some model classes">
       <created>1697121283576</created>

@@ -1,0 +1,13 @@
+[
+  {
+    "userId" : "string",
+    "firstname" : "string",
+    "lastname" : "string",
+    "schoolName" : "string",
+    "address" : "string",
+    "contact" : "string",
+    "login" : "string",
+    "password" : "string",
+    "nameOfSchool" : "string"
+  }
+]
