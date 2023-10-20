@@ -10,8 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="158f47c9-c6be-4817-b9d9-79199c580dff" name="Changes" comment="new work">
-      <change afterPath="$PROJECT_DIR$/temp.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infrastructure" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/resaschool/infrastructure/model/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/resaschool/infrastructure/model/UserEntity.java" afterDir="false" />
     </list>
@@ -37,7 +35,7 @@
       </map>
     </option>
     <option name="RECENT_COMMON_BRANCH" value="master" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/rest" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -283,7 +281,7 @@
       <option name="presentableId" value="Default" />
       <updated>1697111411519</updated>
       <workItem from="1697111412638" duration="7120000" />
-      <workItem from="1697201028768" duration="41135000" />
+      <workItem from="1697201028768" duration="41469000" />
     </task>
     <task id="LOCAL-00001" summary="init project with some model classes">
       <created>1697121283576</created>
