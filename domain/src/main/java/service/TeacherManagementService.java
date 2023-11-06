@@ -4,16 +4,15 @@ import command.ApplyForJobOfferCommand;
 import command.TeacherControlCommand;
 import exception.UserException;
 import lombok.AllArgsConstructor;
-import model.Application;
-import model.JobOffer;
-import model.Teacher;
-import model.User;
+import model.*;
 import persistence.*;
 import usecase.TeacherManagement;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
+import static model.OfferStatus.OPEN;
 
 @AllArgsConstructor
 public class TeacherManagementService implements TeacherManagement {
@@ -61,7 +60,9 @@ public class TeacherManagementService implements TeacherManagement {
 
     @Override
     public List<JobOffer> viewAvailableJobOffers() {
-        return jobOfferData.findAll();
+        return jobOfferData.findAll().stream()
+                .filter(JobOffer::isOpen)
+                .collect(Collectors.toList());
     }
 
     @Override

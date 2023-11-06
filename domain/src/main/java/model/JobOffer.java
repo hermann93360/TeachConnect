@@ -5,6 +5,8 @@ import lombok.*;
 import java.util.Date;
 import java.util.List;
 
+import static model.OfferStatus.OPEN;
+
 @AllArgsConstructor
 @Builder
 @ToString
@@ -25,5 +27,9 @@ public class JobOffer {
 
     public void removeApplication(Application application) {
         applications.remove(application);
+    }
+
+    public boolean isOpen(){
+        return status.equals(OPEN);
     }
 }
