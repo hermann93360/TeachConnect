@@ -12,7 +12,7 @@ public interface TeacherManagement {
 
     Teacher registerTeacher(TeacherControlCommand command);
 
-    void updateTeacherProfile(TeacherControlCommand command);
+    //void updateTeacherProfile(TeacherControlCommand command);
 
     void deleteTeacher(Long teacherId);
 
@@ -20,7 +20,7 @@ public interface TeacherManagement {
 
     Application applyForJobOffer(ApplyForJobOfferCommand command);
 
-    void retractApplication(Long teacherId, Long applicationId);
+    //void retractApplication(Long teacherId, Long applicationId);
 
     List<JobOffer> viewAppliedJobOffers(Long teacherId);
 

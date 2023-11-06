@@ -32,6 +32,7 @@ public class TeacherManagementService implements TeacherManagement {
         }
 
         Teacher teacher = command.toModel();
+        teacher.getUser().setCreatedBy(userByLogin.get());
         return teacherData.save(teacher);
     }
 

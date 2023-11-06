@@ -1,7 +1,9 @@
 package command;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import model.Teacher;
 import model.User;
 import model.UserRole;
@@ -11,6 +13,8 @@ import java.util.Optional;
 
 @Builder
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class TeacherControlCommand {
     private Long teacherId;
     private String specialty;

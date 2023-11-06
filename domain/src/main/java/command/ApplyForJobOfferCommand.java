@@ -1,7 +1,6 @@
 package command;
 
-import lombok.Builder;
-import lombok.Getter;
+import lombok.*;
 import model.Application;
 import model.ApplicationStatus;
 import model.JobOffer;
@@ -9,8 +8,10 @@ import model.Teacher;
 
 import java.util.Date;
 
-@Getter
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class ApplyForJobOfferCommand {
     private Long teacherId;
     private Long offerId;
