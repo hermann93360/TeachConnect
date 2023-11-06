@@ -10,15 +10,12 @@ import org.junit.jupiter.api.Test;
 import persistence.JobOfferData;
 import persistence.SchoolData;
 import persistence.UserData;
-import service.SchoolManagementService;
 import service.UserManagementService;
-import stubs.JobOfferDataStub;
-import stubs.SchoolDataStub;
-import stubs.UserDataStub;
+import service.stubs.JobOfferDataStub;
+import service.stubs.SchoolDataStub;
+import service.stubs.UserDataStub;
 
 import java.util.Optional;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class UserManagementTest {
 

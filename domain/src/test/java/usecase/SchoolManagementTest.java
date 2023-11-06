@@ -11,12 +11,11 @@ import persistence.SchoolData;
 import persistence.TeacherData;
 import persistence.UserData;
 import service.SchoolManagementService;
-import stubs.JobOfferDataStub;
-import stubs.SchoolDataStub;
-import stubs.TeacherDataStub;
-import stubs.UserDataStub;
+import service.stubs.JobOfferDataStub;
+import service.stubs.SchoolDataStub;
+import service.stubs.TeacherDataStub;
+import service.stubs.UserDataStub;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;

@@ -7,16 +7,12 @@ import model.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import persistence.ApplicationData;
-import persistence.JobOfferData;
-import persistence.SchoolData;
-import persistence.UserData;
+import persistence.*;
 import service.TeacherManagementService;
-import stubs.*;
+import service.stubs.*;
 
 import java.util.*;
 
-import static model.Application.createNewApplication;
 import static model.UserRole.TEACHER;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
@@ -27,7 +23,7 @@ class TeacherManagementTest {
     private final JobOfferData jobOfferData = new JobOfferDataStub();
     private final SchoolData schoolData = new SchoolDataStub();
     private final UserData userData = new UserDataStub();
-    private final TeacherDataStub teacherData = new TeacherDataStub();
+    private final TeacherData teacherData = new TeacherDataStub();
     private final ApplicationData applicationData = new ApplicationDataStub();
 
     @BeforeEach

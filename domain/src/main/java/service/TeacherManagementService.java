@@ -61,7 +61,7 @@ public class TeacherManagementService implements TeacherManagement {
 
     @Override
     public List<JobOffer> viewAvailableJobOffers() {
-        return null;
+        return jobOfferData.findAll();
     }
 
     @Override
