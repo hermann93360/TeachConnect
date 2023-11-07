@@ -27,7 +27,6 @@ public class SchoolManagementService implements SchoolManagement {
     @Override
     public School registerSchool(RegisterSchoolCommand command) {
         Optional<User> userByLogin = userData.findByLogin(command.getUserLogin());
-
         if(userByLogin.isPresent()) {
             throw new UserException("this user already exist");
         }
