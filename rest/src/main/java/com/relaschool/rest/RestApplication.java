@@ -1,5 +1,6 @@
 package com.relaschool.rest;
 
+import com.resaschool.infrastructure.InfrastructureApplication;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import service.stubs.InitClass;
@@ -8,7 +9,6 @@ import service.stubs.InitClass;
 public class RestApplication {
 
     public static void main(String[] args) {
-        InitClass.initData();
         SpringApplication.run(RestApplication.class, args);
     }
 

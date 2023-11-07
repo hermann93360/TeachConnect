@@ -1,5 +1,7 @@
 package com.relaschool.rest.configuration;
 
+import com.resaschool.infrastructure.adapter.TeacherDataJpa;
+import com.resaschool.infrastructure.repository.TeacherRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import service.SchoolManagementService;
@@ -12,7 +14,7 @@ import usecase.TeacherManagement;
 public class BeanConfiguration {
     @Bean
     public TeacherManagement teacherManagement() {
-        return new TeacherManagementService(new JobOfferDataStub(), new SchoolDataStub(), new UserDataStub(), new TeacherDataStub(), new ApplicationDataStub());
+        return new TeacherManagementService(new JobOfferDataStub(), new SchoolDataStub(), new UserDataStub(), new TeacherDataJpa(), new ApplicationDataStub());
     }
 
     @Bean
