@@ -22,7 +22,6 @@ public class TeacherController {
 
     public TeacherController(TeacherManagement teacherManagement) {
         this.teacherManagement = teacherManagement;
-        InitClass.initData();
     }
 
     @GetMapping("/teacher")
