@@ -32,8 +32,18 @@ public class TeacherManagementService implements TeacherManagement {
         }
 
         Teacher teacher = command.toModel();
-        teacher.getUser().setCreatedBy(userByLogin.get());
         return teacherData.save(teacher);
+    }
+
+    @Override
+    public Teacher getTeacherData(Long teacherId) {
+        Optional<Teacher> teacher = teacherData.findById(teacherId);
+
+        if(teacher.isEmpty()) {
+            throw new UserException("teacher Do not exist");
+        }
+
+        return teacher.get();
     }
 
     @Override
