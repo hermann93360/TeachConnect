@@ -33,7 +33,6 @@ import static com.relaschool.jee.servlets.ServletUtils.*;
 
 @WebServlet("/api/teachers/*")
 public class TeacherServlet extends HttpServlet {
-
     private final Map<String, ServletAction> doGetActions = new HashMap<>();
     private final Map<String, ServletAction> doPostActions = new HashMap<>();
     private final Map<String, ServletAction> doDeleteActions = new HashMap<>();
@@ -125,7 +124,6 @@ public class TeacherServlet extends HttpServlet {
 
     private void getJobOffers(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         Long teacherId = getLongParameter(req, "teacherId");
-
         if (teacherId == null) {
             createJsonResponse(resp, mapJobOfferOutput(teacherManagement.viewAvailableJobOffers()));
         } else {
