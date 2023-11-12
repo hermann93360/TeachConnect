@@ -34,6 +34,10 @@ public class JobOfferEntity {
     private OfferStatus status;
     @OneToMany(mappedBy = "offer")
     private List<ApplicationEntity> applications;
+    private String skills;
+    private String constraint;
+    private String period;
+    private String notes;
 
     public JobOffer toModel() {
         School modelSchool = School.builder()
@@ -45,7 +49,7 @@ public class JobOfferEntity {
                 .build();
 
         return new JobOffer(offerId, description, publicationDate, modificationDate, status,
-                applications.stream().map(ApplicationEntity::toModel).collect(Collectors.toList()), modelSchool);
+                applications.stream().map(ApplicationEntity::toModel).collect(Collectors.toList()), notes, skills, constraint, period, modelSchool);
     }
 
     public static JobOfferEntity fromModel(JobOffer jobOffer) {

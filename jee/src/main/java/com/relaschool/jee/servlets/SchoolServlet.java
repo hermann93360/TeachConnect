@@ -1,26 +1,17 @@
 package com.relaschool.jee.servlets;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.relaschool.jee.factory.SchoolServiceFactory;
-import com.relaschool.jee.factory.TeacherServiceFactory;
-import com.relaschool.jee.output.JobOfferOutput;
 import com.relaschool.jee.output.SchoolOutput;
 import command.RegisterSchoolCommand;
-import command.TeacherControlCommand;
-import command.UpdateSchoolCommand;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import model.JobOffer;
 import model.School;
-import service.stubs.InitClass;
 import usecase.SchoolManagement;
-import usecase.TeacherManagement;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

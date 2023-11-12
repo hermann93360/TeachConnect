@@ -1,7 +1,6 @@
 package com.relaschool.jee.servlets;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.relaschool.jee.factory.TeacherServiceFactory;
 import com.relaschool.jee.output.JobOfferApplyOutput;
 import com.relaschool.jee.output.JobOfferOutput;
@@ -13,25 +12,19 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import model.Application;
 import model.JobOffer;
 import model.Teacher;
-import service.stubs.InitClass;
 import usecase.TeacherManagement;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.function.BiConsumer;
 import java.util.stream.Collectors;
 
 import static com.relaschool.jee.servlets.ServletUtils.*;
 
-@WebServlet("/api/teachers/*")
+@WebServlet(name ="TeacherServlet", value = "/api/teachers/*")
 public class TeacherServlet extends HttpServlet {
     private final Map<String, ServletAction> doGetActions = new HashMap<>();
     private final Map<String, ServletAction> doPostActions = new HashMap<>();
@@ -40,7 +33,6 @@ public class TeacherServlet extends HttpServlet {
     private final TeacherManagement teacherManagement = TeacherServiceFactory.getInstance();
 
     public TeacherServlet() {
-        InitClass.initData();
         doGetActions.put("/job-offers", this::getJobOffers);
         doGetActions.put("/data", this::getTeacherData);
         doDeleteActions.put("/delete", this::deleteTeacher);

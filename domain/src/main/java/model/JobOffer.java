@@ -19,6 +19,10 @@ public class JobOffer {
     private Date modificationDate;
     private OfferStatus status;
     private List<Application> applications;
+    private String skills;
+    private String constraint;
+    private String period;
+    private String notes;
     private School createdBy;
 
     public void haveNewApplication(Application application) {

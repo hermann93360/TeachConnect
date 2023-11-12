@@ -14,6 +14,15 @@ public class Teacher {
     private Long teacherId;
     private User user;
     private String specialty;
+    private String skills;
+    private String graduate;
+    private String interest;
+    private String wishLevel;
+    private String website;
+    private String availability;
+    private String wishContractType;
+    private String otherDataAboutTeacher;
+    private String references;
     private List<Application> applications;
 
     public Application applyFor(JobOffer offer) {

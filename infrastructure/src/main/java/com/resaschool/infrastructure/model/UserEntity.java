@@ -20,6 +20,7 @@ public class UserEntity {
     private String firstName;
     private String lastName;
     private String password;
+    private String phone;
     @Enumerated(EnumType.STRING)
     private UserRole role;
     @ManyToOne
@@ -27,7 +28,7 @@ public class UserEntity {
     private UserEntity createdBy;
 
     public User toModel() {
-        return new User(userId, login, password, firstName, lastName, role, createdBy.toModel());
+        return new User(userId, login, password, firstName, lastName, role, createdBy.toModel(), phone);
     }
 
     public static UserEntity fromModel(User user) {

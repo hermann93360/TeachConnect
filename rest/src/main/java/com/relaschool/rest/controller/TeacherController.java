@@ -5,11 +5,8 @@ import com.relaschool.rest.dto.output.JobOfferOutput;
 import com.relaschool.rest.dto.output.TeacherOutput;
 import command.ApplyForJobOfferCommand;
 import command.TeacherControlCommand;
-import lombok.AllArgsConstructor;
-import model.Teacher;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.stubs.InitClass;
 import usecase.TeacherManagement;
 
 import java.util.List;

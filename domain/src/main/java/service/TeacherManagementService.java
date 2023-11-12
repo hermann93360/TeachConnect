@@ -2,6 +2,7 @@ package service;
 
 import command.ApplyForJobOfferCommand;
 import command.TeacherControlCommand;
+import exception.TeacherException;
 import exception.UserException;
 import lombok.AllArgsConstructor;
 import model.*;
@@ -82,11 +83,11 @@ public class TeacherManagementService implements TeacherManagement {
         Optional<JobOffer> applyOffer = jobOfferData.findById(command.getOfferId());
 
         if(applyTeacher.isEmpty()) {
-            throw new RuntimeException("");
+            throw new TeacherException("teacher does not exist");
         }
 
         if(applyOffer.isEmpty()) {
-            throw new RuntimeException("");
+            throw new TeacherException("teacher does not exist");
         }
 
         Application application = applyTeacher
@@ -101,7 +102,7 @@ public class TeacherManagementService implements TeacherManagement {
         Optional<Teacher> applyTeacher = teacherData.findById(teacherId);
 
         if(applyTeacher.isEmpty()) {
-            throw new RuntimeException("This teacher do not exist");
+            throw new TeacherException("teacher does not exist");
         }
 
 
@@ -114,7 +115,7 @@ public class TeacherManagementService implements TeacherManagement {
         Optional<Teacher> teacher = teacherData.findById(teacherId);
 
         if(teacher.isEmpty()) {
-            throw new RuntimeException("Teacher do not exist");
+            throw new TeacherException("teacher does not exist");
         }
 
         return teacher.get().getApplications().stream()

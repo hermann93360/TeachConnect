@@ -4,6 +4,7 @@ import command.CreateJobOfferCommand;
 import command.RegisterSchoolCommand;
 import command.UpdateJobOfferCommand;
 import exception.JobOfferException;
+import exception.SchoolException;
 import exception.UserException;
 import lombok.AllArgsConstructor;
 import model.*;
@@ -12,6 +13,7 @@ import persistence.SchoolData;
 import persistence.UserData;
 import usecase.SchoolManagement;
 
+import javax.script.ScriptException;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -52,7 +54,7 @@ public class SchoolManagementService implements SchoolManagement {
         Optional<School> school = schoolData.findById(schoolId);
 
         if(school.isEmpty()) {
-            throw new RuntimeException("");
+            throw new SchoolException("school does not exist");
         }
 
         schoolData.delete(schoolId);
@@ -72,7 +74,7 @@ public class SchoolManagementService implements SchoolManagement {
         Optional<School> school = schoolData.findById(schoolId);
 
         if(school.isEmpty()) {
-            throw new RuntimeException("");
+            throw new SchoolException("school does not exist");
         }
 
         return school.get().getJobOffers();
@@ -84,7 +86,7 @@ public class SchoolManagementService implements SchoolManagement {
         Optional<School> schoolToPost = schoolData.findById(command.getSchoolId());
 
         if(schoolToPost.isEmpty()) {
-            throw new RuntimeException("");
+            throw new SchoolException("school does not exist");
         }
 
         jobOffer.setCreatedBy(schoolToPost.get());

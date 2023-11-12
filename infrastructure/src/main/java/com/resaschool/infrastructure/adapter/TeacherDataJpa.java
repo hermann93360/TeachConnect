@@ -1,5 +1,6 @@
 package com.resaschool.infrastructure.adapter;
 
+import com.resaschool.infrastructure.model.JobOfferEntity;
 import com.resaschool.infrastructure.model.TeacherEntity;
 import com.resaschool.infrastructure.repository.TeacherRepository;
 import model.Teacher;
@@ -9,6 +10,8 @@ import persistence.TeacherData;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Service
 public class TeacherDataJpa implements TeacherData {
@@ -22,18 +25,20 @@ public class TeacherDataJpa implements TeacherData {
     }
 
     @Override
-    public Optional<Teacher> findById(Long id) {
-        return teacherRepository.findByTeacherId(id).map(TeacherEntity::toModel);
+    public Optional<Teacher> findById(Long teacherId) {
+        return teacherRepository.findByTeacherId(teacherId).map(TeacherEntity::toModel);
     }
 
     @Override
     public void delete(Long teacherId) {
-
+        teacherRepository.deleteById(teacherId);
     }
 
     @Override
     public List<Teacher> findAll() {
-        return null;
+        return StreamSupport.stream(teacherRepository.findAll().spliterator(), false)
+                .map(TeacherEntity::toModel)
+                .collect(Collectors.toList());
     }
 
     @Override

@@ -1,13 +1,17 @@
 package command;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import model.School;
 import model.User;
 import model.UserRole;
 
-@Builder
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class RegisterSchoolCommand {
     private Long schoolId;
     private String name;

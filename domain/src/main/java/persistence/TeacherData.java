@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface TeacherData {
     Teacher save(Teacher teacher);
-    Optional<Teacher> findById(Long id);
+    Optional<Teacher> findById(Long teacherId);
     void delete(Long teacherId);
     List<Teacher> findAll();
     List<Teacher> findByApplyOfferId(Long offerId);
