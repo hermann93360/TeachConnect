@@ -11,6 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="158f47c9-c6be-4817-b9d9-79199c580dff" name="Changes" comment="new work">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_11_2023_01_05_[Changes]/shelved.patch" afterDir="false" />
@@ -28,6 +29,10 @@
       <change beforePath="$PROJECT_DIR$/domain/src/main/java/service/SchoolManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/service/SchoolManagementService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/src/main/java/service/TeacherManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/service/TeacherManagementService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/src/main/java/service/stubs/InitClass.java" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> 65e1ce49567f4b298e0fcbe21cadf38f03f71349
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +66,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+<<<<<<< HEAD
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -71,6 +77,11 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
+=======
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+>>>>>>> 65e1ce49567f4b298e0fcbe21cadf38f03f71349
   <component name="ProjectId" id="2Wf6htLGWyhRlXXlrUHmw6H2QX6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -89,6 +100,10 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+<<<<<<< HEAD
+=======
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+>>>>>>> 65e1ce49567f4b298e0fcbe21cadf38f03f71349
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/hkamg/OneDrive/Bureau/Relaschool/global/rest/src/main/java/com/relaschool/rest&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -96,11 +111,19 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+<<<<<<< HEAD
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;f7c1332c58a837ce0d71ae3ea70bf81e&quot;,
+=======
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;f1bd16de3e0d74fac68ae6d5e400843d&quot;,
+>>>>>>> 65e1ce49567f4b298e0fcbe21cadf38f03f71349
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -131,8 +154,20 @@
       <recent name="com.relaschool.jee.output" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="JBoss/WildFly Server.JBoss/WildFly 27.0.1.Final">
     <configuration name="JBoss/WildFly 27.0.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 27.0.1.Final" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="11" nameIsGenerated="true">
+=======
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="JBoss/WildFly Server.JBoss/WildFly 27.0.1.Final">
+    <configuration name="JBoss/WildFly 27.0.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 27.0.1.Final" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="corretto-11" nameIsGenerated="true">
+>>>>>>> 65e1ce49567f4b298e0fcbe21cadf38f03f71349
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="jee:war">
@@ -328,6 +363,7 @@
       <workItem from="1699299955095" duration="2468000" />
       <workItem from="1699302458344" duration="7107000" />
       <workItem from="1699370113641" duration="6606000" />
+<<<<<<< HEAD
       <workItem from="1699534408008" duration="2280000" />
       <workItem from="1699540928874" duration="62000" />
       <workItem from="1699541052800" duration="174000" />
@@ -335,6 +371,15 @@
       <workItem from="1699618640916" duration="925000" />
       <workItem from="1699647002916" duration="4235000" />
       <workItem from="1699788216528" duration="2415000" />
+=======
+      <workItem from="1699390180573" duration="8743000" />
+      <workItem from="1699484423651" duration="1823000" />
+      <workItem from="1699486401674" duration="1264000" />
+      <workItem from="1699487893528" duration="326000" />
+      <workItem from="1699488317461" duration="1400000" />
+      <workItem from="1699489935299" duration="424000" />
+      <workItem from="1699490707526" duration="675000" />
+>>>>>>> 65e1ce49567f4b298e0fcbe21cadf38f03f71349
     </task>
     <task id="LOCAL-00001" summary="init project with some model classes">
       <created>1697121283576</created>
@@ -389,10 +434,10 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/global$JBoss_WildFly_27_0_1_Final.ic" NAME="JBoss/WildFly 27.0.1.Final Coverage Results" MODIFIED="1697118996781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/global$UserManagementTest_shouldDeleteUser.ic" NAME="UserManagementTest.shouldDeleteUser Coverage Results" MODIFIED="1697317455101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>usecase.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/global$JBoss_WildFly_27_0_1_Final.ic" NAME="JBoss/WildFly 27.0.1.Final Coverage Results" MODIFIED="1697118996781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/global$SchoolManagementTest_shouldSaveNewJobOfferAsSchool.ic" NAME="SchoolManagementTest.shouldSaveNewJobOfferAsSchool Coverage Results" MODIFIED="1697235885983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>usecase.*</FILTER>
     </SUITE>
